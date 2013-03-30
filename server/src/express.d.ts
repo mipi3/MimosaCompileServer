@@ -1,6 +1,7 @@
 ///<reference path='./node.d.ts' />
 
 declare module "express" {
+
     export function createServer(): ExpressServer;
     export function static(path: string): any;
     import http = module("http");
@@ -8,9 +9,11 @@ declare module "express" {
 
    // Connect middleware
     export function bodyParser(options?:any): (req: ExpressServerRequest, res: ExpressServerResponse, next) =>void;
-    export function errorHandler(opts?:any): (req: ExpressServerRequest, res: ExpressServerResponse, next) =>void;
+    export function errorHandler(options?:any): (req: ExpressServerRequest, res: ExpressServerResponse, next) =>void;
     export function methodOverride(): (req: ExpressServerRequest, res: ExpressServerResponse, next) =>void;
-    
+    export function favicon(options?:any): (req: ExpressServerRequest, res: ExpressServerResponse, next) =>void;
+    export function compress(options?:any): (req: ExpressServerRequest, res: ExpressServerResponse, next) =>void;
+
     export interface ExpressSettings {
         env?: string;
         views?: string;
@@ -53,6 +56,7 @@ declare module "express" {
         use(route: string, server: ExpressServer): ExpressServer;
         use(callback: Function): ExpressServer;
         use(server: ExpressServer): ExpressServer;
+        router: any;
     }
     
     export class ExpressServerRequest extends http.ServerRequest {
