@@ -17,6 +17,7 @@ declare module "mimosa" {
 		path : string;
 		extension : string;
 		html : bool;
+		compileWith : string;
 	}
 
 	export interface IWatchConfig {
