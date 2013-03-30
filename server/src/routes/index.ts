@@ -12,7 +12,7 @@ export function index(config: any):
 
   var options = {
     reload:    config.liveReload.enabled,
-    optimize:  config.isOptimize != null ? config.isOptimize : false,
+    optimize:  config.isOptimize !== null ? config.isOptimize : false,
     cachebust: process.env.NODE_ENV !== 'production' ? '?b=' + ((new Date()).getTime()) : ''
   };
 

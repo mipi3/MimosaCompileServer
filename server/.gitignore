@@ -1,6 +1,7 @@
 # Ignore generated TypeScript js
 /src/*.js
 /src/**/*.js
+/lib/*
 
 # Ignore npm packaging
 /.node_modules
