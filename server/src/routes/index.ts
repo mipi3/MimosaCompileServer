@@ -1,5 +1,5 @@
-///<reference path='../express.d.ts' />
-///<reference path='../mimosa.d.ts' />
+///<reference path='../d/express.d.ts' />
+///<reference path='../d/mimosa.d.ts' />
 
 import express = module('express');
 

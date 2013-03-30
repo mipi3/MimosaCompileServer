@@ -1,6 +1,6 @@
-///<reference path='./express.d.ts' />
-///<reference path='./mimosa.d.ts' />
-///<reference path='./consolidate.d.ts' />
+///<reference path='./d/express.d.ts' />
+///<reference path='./d/mimosa.d.ts' />
+///<reference path='./d/consolidate.d.ts' />
 
 import engines = module('consolidate');
 import express = module('express');
